@@ -1,9 +1,10 @@
 const board = document.querySelector(".board");
 let boxSize = 600;
-let measures = boxSize / 16;
+let boardSquares = 64;
+let measures = boxSize / boardSquares;
 let isDrawing = false;
 
-for (i = 0; i < 256; i++) {
+for (i = 0; i < boardSquares * boardSquares; i++) {
   let square = document.createElement("div");
   // square.style.backgroundColor = "white";
   square.style.height = `${measures}px`;
