@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+}
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.page-container .container .board {
+  height: 600px;
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: wheat;
+}
+
+.page-container .container .board .square {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: wheat;
+}
+
+.page-container .container .board .square:hover {
+  background-color: black;
+}
+.page-container .container .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-container .container .buttons .reset {
+  height: 50px;
+  width: 100px;
+}
