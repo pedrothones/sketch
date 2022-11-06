@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SketchPad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body ondragstart="return false;" ondrop="return false;">
@@ -13,25 +19,31 @@
       <div class="container">
         <div class="board"></div>
         <div class="buttons">
-          <button class="reset">Reset</button>
-          <form>
-            <input
-              type="radio"
-              name="boardsize"
-              id="32"
-              value="32"
-              class="radio-input thirty-two"
-            />
-            <label for="32">32</label>
-            <input
-              type="radio"
-              name="boardsize"
-              id="64"
-              value="64"
-              class="radio-input sixty-four"
-            />
-            <label for="64">64</label>
-          </form>
+          <button class="button reset">Reset</button>
+          <button class="button erasor">Erasor</button>
+          <button class="button black">Black</button>
+          <input type="color" class="button color" />
+          <div class="board-size-selector">
+            Board Size
+            <form>
+              <input
+                type="radio"
+                name="boardsize"
+                id="32"
+                value="32"
+                class="radio-input thirty-two"
+              />
+              <label for="32">Small</label>
+              <input
+                type="radio"
+                name="boardsize"
+                id="64"
+                value="64"
+                class="radio-input sixty-four"
+              />
+              <label for="64">Big</label>
+            </form>
+          </div>
         </div>
       </div>
     </div>

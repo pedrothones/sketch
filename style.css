@@ -4,12 +4,17 @@
   text-decoration: none;
   background-color: black;
   color: white;
+  font-family: "Albert Sans", sans-serif;
 }
 .page-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.page-container .title {
+  margin: 10px;
+  font-size: 20px;
 }
 .page-container .container .board {
   height: 600px;
@@ -29,12 +34,21 @@
   background-color: black;
 }
 .page-container .container .buttons {
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 8px;
 }
-.page-container .container .buttons .reset {
+.page-container .container .buttons .button {
+  font-weight: bold;
+  font-size: 16px;
   height: 50px;
   width: 100px;
+}
+.page-container .container .buttons .board-size-selector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
