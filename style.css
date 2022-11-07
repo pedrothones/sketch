@@ -13,7 +13,7 @@
   justify-content: center;
 }
 .page-container .title {
-  margin: 10px;
+  margin: 3%;
   font-size: 20px;
 }
 .page-container .container .board {
@@ -34,21 +34,80 @@
   background-color: black;
 }
 .page-container .container .buttons {
-  margin-top: 20px;
+  margin-top: 5%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 8px;
 }
 .page-container .container .buttons .button {
   font-weight: bold;
   font-size: 16px;
   height: 50px;
-  width: 100px;
+  width: 80px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid white 2px;
 }
+.page-container .container .buttons .button:hover {
+  border-color: gray;
+}
+
+.page-container .container .buttons .color-selector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.page-container .container .buttons .color-selector label {
+}
+
+.page-container .container .buttons .color-selector #color-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  height: 60px;
+  width: 60px;
+}
+#color-input::-webkit-color-swatch {
+  border-radius: 50%;
+  border: solid white 1px;
+}
+
 .page-container .container .buttons .board-size-selector {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.radio-input {
+  display: none;
+  width: 1em;
+  height: 1em;
+}
+.board-size-selector label {
+  font-size: 16px;
+  border: solid white 1px;
+  padding: 15px;
+  cursor: pointer;
+  height: ;
+  width: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.board-size-selector label:hover {
+  border: solid gray 1px;
+}
+
+.checkmark {
+}
+
+.page-container .container .buttons .board-size-selector label {
 }

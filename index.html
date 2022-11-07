@@ -22,27 +22,34 @@
           <button class="button reset">Reset</button>
           <button class="button erasor">Erasor</button>
           <button class="button black">Black</button>
-          <input type="color" class="button color" />
+          <div class="color-selector">
+            <label for="color">Color</label>
+            <input
+              value="color"
+              type="color"
+              class="button color-input"
+              id="color-input"
+            />
+          </div>
           <div class="board-size-selector">
             Board Size
-            <form>
-              <input
-                type="radio"
-                name="boardsize"
-                id="32"
-                value="32"
-                class="radio-input thirty-two"
-              />
-              <label for="32">Small</label>
-              <input
-                type="radio"
-                name="boardsize"
-                id="64"
-                value="64"
-                class="radio-input sixty-four"
-              />
-              <label for="64">Big</label>
-            </form>
+            <input
+              type="radio"
+              name="boardsize"
+              id="32"
+              value="32"
+              class="radio-input thirty-two"
+              checked
+            />
+            <label for="32">Small</label>
+            <input
+              type="radio"
+              name="boardsize"
+              id="64"
+              value="64"
+              class="radio-input sixty-four"
+            />
+            <label for="64">Large</label>
           </div>
         </div>
       </div>

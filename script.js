@@ -2,7 +2,7 @@ const board = document.querySelector(".board");
 const smallBoard = document.querySelector(".thirty-two");
 const bigBoard = document.querySelector(".sixty-four");
 const resetButton = document.querySelector(".reset");
-const colorInput = document.querySelector(".color");
+const colorInput = document.querySelector(".color-input");
 const erasor = document.querySelector(".erasor");
 const black = document.querySelector(".black");
 let boxSize = 600;
@@ -38,6 +38,11 @@ function removeDivs() {
   } else return;
 }
 
+function changeColor() {
+  colorInput.addEventListener("change", () => {
+    color = colorInput.value;
+  });
+}
 smallBoard.onclick = function () {
   boardSquares = 32;
   measures = boxSize / boardSquares;
@@ -64,12 +69,6 @@ black.onclick = function () {
   color = "black";
 };
 
-function changeColor() {
-  colorInput.addEventListener("change", () => {
-    color = colorInput.value;
-  });
-}
-console.log(color);
 changeColor();
 createDivs();
 draw();
