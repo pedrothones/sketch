@@ -68,6 +68,7 @@ input[type="radio"] {
 input[type="radio"]:checked {
   box-shadow: inset 11px 15px 65px 10px rgba(125, 125, 125, 0.7);
   background: blue;
+  transition: 0.89s;
 }
 input[type="radio"]::before {
   display: flex;
@@ -86,7 +87,6 @@ input[type="radio"]::before {
 }
 
 input[type="radio"]:checked::before {
-  background: blue;
   background: white;
   margin-left: 69px;
   transition: 0.5s;
