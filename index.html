@@ -17,39 +17,46 @@
     <div class="page-container">
       <div class="title"><h1>SketchPad</h1></div>
       <div class="container">
+        <div class="board-size-selector">
+          <!-- Board Size -->
+          <div class="board-size-title">Board Size</div>
+          <div class="btn-container">
+            <div class="top-btn">
+              <input
+                type="radio"
+                name="boardsize"
+                id="32"
+                value="32"
+                class="radio-input thirty-two"
+                checked
+              />
+              <label for="32">Small</label>
+            </div>
+            <div class="bot-btn">
+              <input
+                type="radio"
+                name="boardsize"
+                id="64"
+                value="64"
+                class="radio-input sixty-four"
+              />
+              <label for="64">Large</label>
+            </div>
+          </div>
+        </div>
         <div class="board"></div>
         <div class="buttons">
           <button class="button reset">Reset</button>
           <button class="button erasor">Erasor</button>
           <button class="button black">Black</button>
           <div class="color-selector">
-            <label for="color">Color</label>
             <input
-              value="color"
+              value="#555555"
               type="color"
-              class="button color-input"
+              class="color-input"
               id="color-input"
             />
-          </div>
-          <div class="board-size-selector">
-            Board Size
-            <input
-              type="radio"
-              name="boardsize"
-              id="32"
-              value="32"
-              class="radio-input thirty-two"
-              checked
-            />
-            <label for="32">Small</label>
-            <input
-              type="radio"
-              name="boardsize"
-              id="64"
-              value="64"
-              class="radio-input sixty-four"
-            />
-            <label for="64">Large</label>
+            <label for="color">Color</label>
           </div>
         </div>
       </div>
