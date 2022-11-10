@@ -7,6 +7,34 @@
   font-family: "Albert Sans", sans-serif;
 }
 
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1em; /* Preferred icon size */
+  display: inline-flex;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+.buttons .reset span:first-child {
+  font-size: 1.25em;
+}
+
 .page-container {
   display: flex;
   flex-direction: column;
@@ -111,18 +139,15 @@ input[type="radio"]:checked::before {
 .page-container .container .buttons {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 8px;
+  justify-content: space-around;
 }
 .page-container .container .buttons .button {
+  margin-top: 0.6em;
   font-weight: bold;
   font-size: 16px;
   height: 50px;
   width: 80px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: solid white 2px;
   height: 2.5em;
   width: 6em;
@@ -130,18 +155,37 @@ input[type="radio"]:checked::before {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 }
 .page-container .container .buttons .button:hover {
-  box-shadow: inset 11px 15px 65px 10px rgba(125, 125, 125, 0.7);
-  background: blue;
-  transition: 0.3s;
+  /* box-shadow: inset 11px 15px 65px 10px rgba(125, 125, 125, 0.7); */
+  background: rgb(76, 76, 180);
+  transition: 0.2s;
 }
 
-.page-container .container .buttons .color-selector {
+.button:hover .material-icons {
+  /* box-shadow: inset 0.05em 0.05em 0.5em 0.05em rgba(0, 0, 0, 0.3);*/
+  background: rgb(76, 76, 180);
+  transition: 0.2s;
+}
+
+.page-container .container .buttons .button .reset,
+.erasor,
+.black {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 4px;
+  border: solid gold 7px;
+}
+
+.color-selector .material-icons {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
 }
 
 .page-container .container .buttons .color-selector #color-input {
@@ -155,8 +199,14 @@ input[type="radio"]:checked::before {
   height: 60px;
   width: 60px;
   cursor: pointer;
+  scale: 0.8;
 }
 #color-input::-webkit-color-swatch {
   border-radius: 50%;
   border: solid white 1px;
+}
+input[type="color"] {
+  position: relative;
+  top: 50%;
+  left: 0;
 }

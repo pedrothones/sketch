@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body ondragstart="return false;" ondrop="return false;">
@@ -46,18 +50,34 @@
         </div>
         <div class="board"></div>
         <div class="buttons">
-          <button class="button reset">Reset</button>
-          <button class="button erasor">Erasor</button>
-          <button class="button black">Black</button>
-          <div class="color-selector">
-            <input
-              value="#555555"
-              type="color"
-              class="color-input"
-              id="color-input"
-            />
-            <label for="color">Color</label>
-          </div>
+          <button class="button reset">
+            <span class="material-icons"> restart_alt </span>
+            Reset
+          </button>
+          <button class="button erasor">
+            <span class="material-icons"> edit_off </span>
+            Erasor
+          </button>
+          <button class="button black">
+            <span class="material-icons"> border_color </span>
+            Black
+          </button>
+          <button class="button color-selector">
+            <div class="color-selector">
+              <label for="color-input">
+                <span class="material-icons color-input-changer">
+                  palette
+                </span>
+                <input
+                  value="#555555"
+                  type="color"
+                  class="color-input"
+                  id="color-input"
+                  style="display: none"
+                />
+              </label>
+            </div>
+          </button>
         </div>
       </div>
     </div>

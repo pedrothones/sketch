@@ -5,6 +5,10 @@ const resetButton = document.querySelector(".reset");
 const colorInput = document.querySelector(".color-input");
 const erasor = document.querySelector(".erasor");
 const black = document.querySelector(".black");
+const buttons = document.querySelectorAll(".button");
+const icons = document.querySelectorAll(".material-icons");
+const colorIcon = document.querySelector(".color-input-changer");
+
 let boxSize = 600;
 let boardSquares = 32;
 let measures = boxSize / boardSquares;
@@ -41,6 +45,7 @@ function removeDivs() {
 function changeColor() {
   colorInput.addEventListener("change", () => {
     color = colorInput.value;
+    // colorIcon.style.color = color;
   });
 }
 smallBoard.onclick = function () {
