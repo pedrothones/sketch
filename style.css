@@ -122,7 +122,7 @@ input[type="checkbox"]::before {
   transition: 0.5s;
 }
 
-input[type="text"]:checked::before {
+input[type="checkbox"]:checked::before {
   background: white;
   margin-left: 69px;
   transition: 0.5s;
