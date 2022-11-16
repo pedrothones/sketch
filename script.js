@@ -1,5 +1,5 @@
 const board = document.querySelector(".board");
-const smallBoard = document.querySelector(".thirty-two");
+// const smallBoard = document.querySelector(".thirty-two");
 const bigBoard = document.querySelector(".sixty-four");
 const resetButton = document.querySelector(".reset");
 const colorInput = document.querySelector(".color-input");
@@ -8,6 +8,8 @@ const black = document.querySelector(".black");
 const buttons = document.querySelectorAll(".button");
 const icons = document.querySelectorAll(".material-icons");
 const colorIcon = document.querySelector(".color-input-changer");
+const largeBoardButton = document.querySelector("input[type=checkbox]");
+const colorButton = document.querySelector(".color-selector");
 
 let boxSize = 600;
 let boardSquares = 32;
@@ -48,13 +50,13 @@ function changeColor() {
     // colorIcon.style.color = color;
   });
 }
-smallBoard.onclick = function () {
-  boardSquares = 32;
-  measures = boxSize / boardSquares;
-  removeDivs();
-  createDivs();
-  draw();
-};
+// smallBoard.onclick = function () {
+//   boardSquares = 32;
+//   measures = boxSize / boardSquares;
+//   removeDivs();
+//   createDivs();
+//   draw();
+// };
 bigBoard.onclick = function () {
   boardSquares = 64;
   measures = boxSize / boardSquares;
@@ -73,6 +75,19 @@ erasor.onclick = function () {
 black.onclick = function () {
   color = "black";
 };
+
+largeBoardButton.addEventListener("change", () => {
+  if (!largeBoardButton.checked) {
+    boardSquares = 32;
+    measures = boxSize / boardSquares;
+    removeDivs();
+    createDivs();
+    draw();
+  }
+});
+colorButton.addEventListener("click", () => {
+  document.querySelector("input[type=color]").click();
+});
 
 changeColor();
 createDivs();
