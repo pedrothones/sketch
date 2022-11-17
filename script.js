@@ -10,6 +10,7 @@ const icons = document.querySelectorAll(".material-icons");
 const colorIcon = document.querySelector(".color-input-changer");
 const largeBoardButton = document.querySelector("input[type=checkbox]");
 const colorButton = document.querySelector(".color-selector");
+const colorVisualizer = document.querySelector(".color-visualizer");
 
 let boxSize = 600;
 let boardSquares = 32;
@@ -47,6 +48,7 @@ function removeDivs() {
 function changeColor() {
   colorInput.addEventListener("change", () => {
     color = colorInput.value;
+    colorVisualizer.style.backgroundColor = color;
     // colorIcon.style.color = color;
   });
 }
@@ -74,6 +76,7 @@ erasor.onclick = function () {
 };
 black.onclick = function () {
   color = "black";
+  colorVisualizer.style.backgroundColor = color;
 };
 
 largeBoardButton.addEventListener("change", () => {

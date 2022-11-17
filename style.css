@@ -209,6 +209,15 @@ input[type="checkbox"]:checked::before {
   cursor: pointer;
   scale: 0.8;
 }
+.page-container .container .buttons .color-selector {
+  display: flex;
+}
+.page-container .container .buttons .color-selector .color-visualizer {
+  border: solid white 2px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
 #color-input::-webkit-color-swatch {
   border-radius: 50%;
   border: solid white 1px;
